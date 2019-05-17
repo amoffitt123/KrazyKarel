@@ -10,7 +10,7 @@ public class KarelBlocker extends Robot
       for(int i = 0; i < 9; i++)
          a.forward(a); 
    }
-   public void collision(KarelBlocker a)
+   public void checkCollision(KarelBlocker a)
    {
       if(a.nextToARobot())
          a.explode();
@@ -18,6 +18,7 @@ public class KarelBlocker extends Robot
    public void forward(KarelBlocker a)
    {
       a.move();
+      a.checkCollision(a);
       if(a.getX() < 1)
          a.explode();
    }
