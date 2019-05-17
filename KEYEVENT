@@ -1,0 +1,14 @@
+private class Key extends java.awt.event.KeyAdapter
+   {
+      public void keyPressed(KeyEvent e)
+      {
+         if(e.getKeyCode() == KeyEvent.VK_UP && (rightbumper.getX() > 10))
+            rightbumper.setY(rightbumper.getY() -40);
+         if(e.getKeyCode() == KeyEvent.VK_DOWN && (rightbumper.getY() < 790))
+            rightbumper.setY(rightbumper.getY() +40);
+         if(e.getKeyCode() == KeyEvent.VK_W && (leftbumper.getX() >= 10))
+            leftbumper.setY(leftbumper.getY() -40);
+         if(e.getKeyCode() == KeyEvent.VK_S && (leftbumper.getY() < 790))
+            leftbumper.setY(leftbumper.getY() +40);
+         
+      }
